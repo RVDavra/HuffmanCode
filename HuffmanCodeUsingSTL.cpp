@@ -1,14 +1,10 @@
-// C++ program for Huffman Coding
 #include <bits/stdc++.h>
 using namespace std;
-
-// A Huffman tree node
 struct MinHeapNode
 {
-    char data;                // One of the input characters
-    unsigned freq;             // Frequency of the character
-    MinHeapNode *left, *right; // Left and right child
-
+    char data;                
+    unsigned freq;            
+    MinHeapNode *left, *right;
     MinHeapNode(char data, unsigned freq)
     {
         left = right = NULL;
@@ -16,8 +12,6 @@ struct MinHeapNode
         this->freq = freq;
     }
 };
-
-// For comparison of two heap nodes (needed in min heap)
 struct compare
 {
     bool operator()(MinHeapNode* l, MinHeapNode* r)
@@ -25,8 +19,6 @@ struct compare
         return (l->freq > r->freq);
     }
 };
-
-// Prints huffman codes from the root of Huffman Tree.
 void printCodes(struct MinHeapNode* root, string str)
 {
     if (!root)
