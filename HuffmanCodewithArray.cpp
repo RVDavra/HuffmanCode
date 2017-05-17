@@ -26,9 +26,9 @@ struct key
 bool forSort(double i,double j){ return i>j; }
 int main()
 {
-    string a="riteshrit";
-//    cout<<"Enter the String:-";
-//    cin>>a;
+    string a;
+    cout<<"Enter the String:-";
+    cin>>a;
     vector<huff> my;
     for(int i=0;i<a.length();i++)
     {
@@ -76,8 +76,8 @@ int main()
     for(int i=len-2;i>=0;i--)
     {
         int a[len];
-        for(int j=0;j<len;j++) if(d[i][j]==0) a[j]=1;
         for(int j=0;j<len;j++) a[j]=0;
+        for(int j=0;j<len;j++) if(d[i][j]==0) a[j]=1;
         for(int j=0;j<len;j++)
             if(done[i][j]==0)
                 for(int k=0;k<len;k++)
